@@ -83,3 +83,83 @@ console.log(secretName(['Harry', 'Ron', 'Hermione']));
 // - `onlineStatus(['mockIng99', 'J0eyPunch', 'glassedFer'])` should return `'mockIng99, J0eyPunch and 1 more online'`.
 
 
+ const users = ['mockIng99', 'J0eyPunch', 'glassedFer', 'anon123'];
+
+    function getLenght(arr) {
+     return arr.length;
+    }
+
+    function calcRemaining(total) {
+        return total - 2;
+    }
+
+    function getUsers(arr) {
+        const users = arr[0] + arr [1];
+         return users;
+    }
+
+ function onlineStatus (arr) {
+     const total = getLenght(arr);
+     const rest = calcRemaining(total);
+     const fisrtUsers = getUsers(arr);
+
+     console.log(`Users: ${fisrtUsers}, and ${rest} are online`);
+     
+    }
+    
+    onlineStatus(users);
+
+
+
+
+
+
+
+
+//Array of Multiples
+ //Create a function that takes two parameters (number, length) and returns an array of length containing multiples of the number.
+ //
+//Examples:
+//- `arrayMultiplos(2, 10)` should return `[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]`.
+//- `arrayMultiplos(17, 6)` should return `[17, 34, 51, 68, 85, 102]`.
+
+
+function arrayMultiplos(number, length) {
+    const result = [];
+
+    for (let index = 1; index <= length; index++) {
+        result.push(number * index);
+    }
+    return result;
+}
+
+console.log(arrayMultiplos(2, 10));
+console.log(arrayMultiplos(17, 6));
+
+
+
+//Positive dominance in Array
+//Write a function to determine if an array is positively dominant.
+//An array is positively dominant when the majority of its elements are positive.
+
+const numArr = [-1000, -1, 50, 1, 2, 5];
+const negativeArr = [-100, -1, -50, -1, 5, 2];
+
+function positiveArr(arr) {
+    let positiveCount = 0;
+    arr.forEach(num => {
+        if (num > 0) {
+            positiveCount++;
+        }
+    });
+
+    const mid = arr.length / 2;
+    return positiveCount > mid;
+}
+
+const res = positiveArr(numArr)
+console.log(res);
+
+
+
+
