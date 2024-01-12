@@ -161,5 +161,26 @@ const res = positiveArr(numArr)
 console.log(res);
 
 
+//Antipodal Average
+// Given an array, return a shorter array following these steps:
+// - Split the array into two equal parts*. If unequal, remove the middle element to obtain two equal arrays.
+// - Sum each number of the first part with the inverse numbers of the second part.
+// - Divide each number of the resulting array by 2.
+// Example:
+// - For the array `[1,2,3,5,22,6]`, the result should be `[3.5, 12, 4]`.
 
+
+const antipodal = array => {
+    const result = [];
+
+    for (let index1 = 0, index2 = array.length -1; index1<index2; index1++, index2--) {
+        const sumDiv = (array[index1] + array[index2]) / 2;
+        result.push(sumDiv);
+
+    }
+    return result;
+};
+
+
+console.log(antipodal([1,2,3,5,22,6]));
 
